@@ -1,0 +1,16 @@
+.ab{
+    position: absolute;
+  padding-top: 10px;
+  padding-left: 200px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  width:500px;
+ 
+}
+.ac{
+  border: 2px solid rgb(223, 28, 28);
+  padding: 10px 20px;
+}
+.error{
+  color: red;
+}

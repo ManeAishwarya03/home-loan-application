@@ -1,0 +1,14 @@
+
+<div [hidden]="submitted" style="width: 400px;">
+    <form (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="name">Date</label>
+        <input type="date" class="form-control" id="date" required [(ngModel)]="date" name="date">
+      </div><br><br>
+      <div class="form-group">
+        <label for="name">loanAmount</label>
+        <input type="number" class="form-control" id="loanAmount" required [(ngModel)]="applyamount" name="loanAmount">
+      </div><br><br>
+      <button type="submit" class="btn btn-success">Submit</button>
+    </form>
+  </div>

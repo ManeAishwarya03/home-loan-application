@@ -1,0 +1,40 @@
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h2 class="lvo">{{name}}</h2>
+    </div>
+    <div class="panel-body">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Application No</th>
+                    <th>Customer Id</th>
+                    <th>Application Date</th>
+                    <th>Applied Ammount</th>
+                    <th>FOV Approval</th>
+                    <th>Customer Details </th>
+                    
+                
+                
+            </thead>
+            <tbody>
+                <!-- in below line async pipe creates a subscription if the source is an Observable -->
+                <tr *ngFor="let loan of loans | async">
+                    <td>{{loan.applicationid}}</td>
+                    <td>{{loan.id}}</td>
+                    <td>{{loan.applicationdate}}</td>
+                    <td>{{loan.applyamount}}</td>
+                    <td>
+                        <button (click)="updateLoan(loan.id,loan.applicationid )" class="btn btn-info" style="margin-left: 10px">Approve</button> 
+                    </td>
+                    <td>
+
+                        <button (click)="customerDetails(loan.id)" class="btn btn-info" style="margin-left: 10px">View</button>
+
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <button onclick="history.back()">Go Back</button>
+
+    </div>
+</div>

@@ -1,0 +1,48 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+  body{
+    position: absolute;
+    min-height: 100vh;
+    background-color: #fff;
+  }
+  .navbar{
+    width: 150px;
+    height: 100vh;
+    position: fixed;
+    background-color: transparent;
+    transition: 0.4s;
+   
+    z-index: 1;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+  }
+  .nav-item{
+      align-items: center;
+      align-content: center;
+  }
+  .nav-link{
+      
+    font-size: 1.25em;
+  }
+  .nav-link:active,
+  .nav-link:focus,
+  .nav-link:hover{
+    background-color: #ffffff26;
+  }
+  .drowpdown-menu{
+      background-color: fuchsia;
+
+  }
+  .dropdown-item:active,
+  .dropdown-item:focus
+  .dropdown-item:hover{
+      background-color: #ffffff26;
+
+  }
+
+
+ 

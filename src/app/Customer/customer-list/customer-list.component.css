@@ -1,0 +1,28 @@
+tr:hover {background-color: rgb(162, 237, 236);}
+table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  button:hover{background-color: rgb(18, 131, 95);
+}
+.btn-info{
+  background-color: orange;
+}
+.btn-details{
+  background-color: greenyellow;
+}
+.btn-trash{
+  background-color: rgba(244, 8, 8, 0.74);
+}
+.panel{
+  position: absolute;
+  padding-top: 50px;
+  padding-left: 200px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+}

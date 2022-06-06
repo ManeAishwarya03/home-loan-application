@@ -1,0 +1,17 @@
+
+<div class="lv">
+  <div [hidden]="submitted" class="lvo">
+      <form (ngSubmit)="onSubmit()">
+          <div class="form-group">
+              <label for="name"><h1>Financeverify</h1> </label><br>
+              <input type="radio" value="true" id="A" name="Landverify" required [(ngModel)]="finance">Approve
+              <input type="radio" value="false" id="R" name="Landverify" required [(ngModel)]="finance"> Reject
+          </div>
+          <button type="submit" class="btn btn-success" >Submit</button>
+      </form>
+  </div>
+
+  <div [hidden]="!submitted">
+      <h4>Updated successfully!</h4>
+  </div>
+</div>

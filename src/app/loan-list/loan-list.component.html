@@ -1,0 +1,44 @@
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h2>Loan Applications</h2>
+    </div>
+    <div class="panel-body">
+        <table class="table table-striped">
+            <thead class="table-warning">
+                <tr>
+                    <th>Application No</th>
+                    <th>Customer Id</th>
+                    <th>Application Date</th>
+                    <th>Applied Ammount</th>
+                    <th>Approved Ammount</th>
+                    <th>LOV Approval</th>
+                    <th>FOV Approval</th>
+                    <th>Admin Approval</th>
+                    <th>status</th>
+                    <th>Action</th>
+            </thead>
+            <tbody>
+                <!-- in below line async pipe creates a subscription if the source is an Observable -->
+                <tr *ngFor="let loan of loans | async">
+                    <td>{{loan.applicationid}}</td>
+                    <td>{{loan.id}}</td>
+                    <td>{{loan.applicationdate}}</td>
+                    <td>{{loan.applyamount}}</td>
+                    <td>{{loan.approveamount}}</td>
+                    <td>{{loan.landverify}}</td>
+                    <td>{{loan.financeverify}}</td>
+                    <td>{{loan.adminapprove}}</td>
+                    <td>{{loan.status}}</td>
+                    <td>
+                        <button (click)="customerDetails(loan.id)" class="btn btn-info" style="margin-left: 10px">View</button>
+                    </td>
+                    <td>
+                        <button (click)="tracker(loan.id,loan.applicationid)" class="btn btn-info"
+                style="margin-left: 10px">track</button>
+                    </td>
+
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

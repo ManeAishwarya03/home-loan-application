@@ -1,0 +1,19 @@
+.log{
+    position: absolute;
+    padding-top: 100px;
+    padding-left: 500px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+  }
+  .as{
+    padding: 10px 20px;
+    border: 2px solid rgb(36, 49, 233);
+    border-radius: 20px;
+  }
+  .pro{
+    padding-left: 50px;
+  }
+  .error{
+    color: red;
+  }
+  

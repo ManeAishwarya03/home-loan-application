@@ -1,0 +1,30 @@
+
+<div class="log">
+  <div class="as">
+  <h2>SignUp</h2>
+  <form (ngSubmit)="onSubmit()" [formGroup]="loginForm">
+    
+    <div class="form-floating mb-3">
+      <input type="text" class="form-control" id="floatingInput" required [(ngModel)]="login.username" name="username" placeholder="username"  formControlName="username">
+      <label for="floatingInput">UserName</label>
+    </div>
+    <div *ngIf="!username?.valid && (username?.dirty || username?.touched)" class="error">
+      <div [hidden]="!username?.errors?.['required']">
+        UserName  is Required.
+      </div>
+    </div>
+    <div class="form-floating mb-3">
+    <input type="text" class="form-control" id="floatingInput" required [(ngModel)]="login.password" name="password" placeholder="password"   formControlName="password">
+    <label for="floatingInput">Password</label>
+  </div>
+  <div *ngIf="!password?.valid && (password?.dirty || password?.touched)" class="error">
+    <div [hidden]="!password?.errors?.['required']">
+      Password  is Required.
+    </div>
+  </div>
+  <br>
+    <button type="submit" class="btn btn-success">SignUp</button> 
+  </form>
+</div>
+</div>
+<app-home-sidebar></app-home-sidebar>

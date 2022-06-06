@@ -1,0 +1,21 @@
+<h3>Eligiblity Calculator</h3>
+<div [hidden]="submitted" style="width: 400px;">
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="name">MonthlyIncome</label>
+      <input type="text" class="form-control" id="monthlyIncome" required [(ngModel)]="monthlyIncome" name="monthlyIncome">
+    </div><br><br>
+    <div class="form-group">
+      <label for="name">EMI</label>
+      <input type="text" class="form-control" id="EMI" required [(ngModel)]="EMI" name="EMI">
+    </div><br><br>
+    <button type="submit" class="btn btn-success">Submit</button>
+  </form>
+</div>
+<div [hidden]="!submitted">
+</div><br><br>
+<div *ngIf="eligibilitycalculator"></div>
+<div>
+  <label><b>You are Eligible For Loan Amount: </b></label> {{loanAmount}}
+</div>
+

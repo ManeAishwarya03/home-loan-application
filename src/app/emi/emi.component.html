@@ -1,0 +1,30 @@
+<h3>Emi Calculator</h3>
+<div [hidden]="submitted" style="width: 400px;">
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="name">Loan Amount</label>
+      <input type="text" class="form-control" id="loanAmount" required [(ngModel)]="loanAmount" name="loanAmount">
+    </div><br><br>
+    <div class="form-group">
+      <label for="name">Rate of Interest</label>
+      <input type="text" class="form-control" id="rateOfInterest" required [(ngModel)]="rateOfInterest" name="rateOfInterest">
+    </div><br><br>
+    <div class="form-group">
+      <label for="name">Time Period</label>
+      <input type="text" class="form-control" id="timePeriod" required [(ngModel)]="timePeriod" name="timePeriod">
+    </div><br><br>
+    <button type="submit" class="btn btn-success">Submit</button>
+  </form>
+</div>
+<div [hidden]="!submitted">
+</div><br><br>
+<div *ngIf="emi"></div>
+<div>
+  <label><b>Emi Amount </b></label> {{emiAmount}}
+</div>
+
+
+<div [hidden]="!submitted">
+</div><br><br>
+
+

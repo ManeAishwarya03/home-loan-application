@@ -1,0 +1,141 @@
+<div [hidden]="submitted" class="ab">
+  <form (ngSubmit)="onSubmit()" class="ac" [formGroup]="personForm" novalidate>
+    <h1> Add Details</h1>
+      <p class="form-group">
+
+          <label for="name"> Name</label>
+          <input type="text" class="form-control" id="name" required [(ngModel)]="customer.name" name="name" formControlName="name"> 
+      </p>
+      <div *ngIf="!name?.valid && (name?.dirty || name?.touched)" class="error">
+        <div [hidden]="!name?.errors?.['required']">
+          First Name is Required.
+        </div>
+        <div [hidden]="!name?.errors?.['minlength']">
+          First Name Minimum Length is 3
+        </div>
+        <div [hidden]="!name?.errors?.['pattern']">
+          only Characters are allowed
+        </div>
+      </div>
+      
+      
+     
+
+      <p class="form-group">
+          <label for="mobileNumber">Mobile Number</label>
+          <input type="text" class="form-control" id="mobileNumber" required [(ngModel)]="customer.mobileNumber" formControlName="mobileNumber">  
+
+      </p>
+      <div *ngIf="!mobileNumber?.valid && (mobileNumber?.dirty || mobileNumber?.touched)" class="error">
+          <div [hidden]="!mobileNumber?.errors?.['required']">
+              mobileNumber is Required.
+          </div>
+          <div [hidden]="!mobileNumber?.errors?.['minlength']">
+              MobileNumber must be 10 digits
+          </div>
+          <div [hidden]="!mobileNumber?.errors?.['pattern']">
+            only Number are allowed
+          </div>
+        </div>
+
+
+      <p class="form-group">
+          <label for="name">Email Id</label>
+          <input type="emaild" class="form-control" id="emaild" required [(ngModel)]="customer.emaild" name="emaild" formControlName="emaild">
+      </p>
+      <div *ngIf="!emaild?.valid && (emaild?.dirty || emaild?.touched)" class="error">
+          <div [hidden]="!emaild?.errors?.['required']">
+            Email is Required.
+          </div>
+          <div [hidden]="!emaild?.errors?.['email']">
+            Email is not Valid.
+          </div>
+        </div>
+
+      <p class="form-group">
+          <label for="name">Date of Birth</label>
+          <input type="Date" class="form-control" id="dob" required [(ngModel)]="customer.dob" name="dob" formControlName="dob"
+          min="1962-01-01" max="2000-01-01">
+      </p>
+      <div *ngIf="!dob?.valid && (dob?.dirty || dob?.touched)" class="error">
+          <div [hidden]="!dob?.errors?.['required']">
+              dob is Required.
+          </div>
+          
+         
+        </div>
+
+        <p>
+          <label for="gender">Gender</label>
+          <input type="radio" value="male" id="M" name="gender" formControlName="gender">male
+          <input type="radio" value="female" id="F" name="gender" formControlName="gender">Female
+          <input type="radio" value="other" id="O" name="gender" formControlName="gender">Other
+        </p>
+        <div *ngIf="!gender?.valid && (gender?.dirty || gender?.touched)" class="error">
+          <div [hidden]="!gender?.errors?.['required']">
+            Gender is Required.
+          </div>
+        </div>
+
+      <p action="/action_page.php" class="form-group" style="width:500px ;">
+          <label for="name">Nationality</label><br>
+          <select name="nationality" id="nationality" required [(ngModel)]="customer.nationality" formControlName="nationality">
+              <option value=""></option>
+              <option value="Indian">Indian</option>
+              <option value="Australia">Australia</option>
+              <option value="United States">United States</option>
+              <option value="Germay ">Germay</option>
+          </select>
+
+      </p>
+      <div *ngIf="!nationality?.valid && (nationality?.dirty || nationality?.touched)" class="error"  >
+          <div [hidden]="!nationality?.errors?.['required']">
+              Nationality is Required.
+          </div>
+        </div>
+
+      <p class="form-group">
+          <label for="name">Aadhar Number</label>
+          <input type="text" class="form-control" id="aadharNumber" required [(ngModel)]="customer.aadharNumber"
+              name="aadharNumber" formControlName="aadharNumber">
+      </p>
+      <div *ngIf="!aadharNumber?.valid && (aadharNumber?.dirty || aadharNumber?.touched)" class="error">
+          <div [hidden]="!aadharNumber?.errors?.['required']">
+              AadharNumberis Required.
+          </div>
+          <div [hidden]="!aadharNumber?.errors?.['minlength']">
+              Aaadhar Number must be 12 Digits 
+          </div>
+          <div [hidden]="!aadharNumber?.errors?.['pattern']">
+            only Number are allowed
+          </div>
+        </div>
+      <p class="form-group">
+          <label for="name">PanCard </label>
+          <input type="text" class="form-control" id="pan" required [(ngModel)]="customer.pan" name="pan" formControlName="pan">
+      </p>
+      <div *ngIf="!pan?.valid && (pan?.dirty || pan?.touched)" class="error">
+          <div [hidden]="!pan?.errors?.['required']">
+              pan is Required.
+          </div>
+          <div [hidden]="!pan?.errors?.['minlength']">
+              Pan Number must be 10 Digits
+          </div>
+          <div [hidden]="!pan?.errors?.['pattern']">
+            only [A-z 0-9 ] are allowed
+          </div>
+        </div>
+
+
+
+      
+
+
+
+
+      <button type=" submit" class="btn btn-success">Submit</button>
+  </form>
+</div>
+
+
+<app-customer-sidebar></app-customer-sidebar>

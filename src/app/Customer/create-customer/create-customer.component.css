@@ -1,0 +1,20 @@
+.ab{
+    position: absolute;
+  padding-top: 10px;
+  padding-left: 200px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  width:500px;
+ 
+}
+.ac{
+ 
+  border-style: double;
+  padding: 10px 20px;
+}
+label{
+    font-weight: bold;
+}
+.error{
+  color: red;
+}
